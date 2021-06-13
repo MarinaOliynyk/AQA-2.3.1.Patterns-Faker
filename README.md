@@ -1,0 +1,1 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/vlgj6q89wtlt2h0q?svg=true)](https://ci.appveyor.com/project/MarinaOliynyk/aqa-2-3-1-patterns-faker)
