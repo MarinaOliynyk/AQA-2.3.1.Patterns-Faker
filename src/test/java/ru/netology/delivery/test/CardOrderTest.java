@@ -17,7 +17,7 @@ class CardOrderTest {
         open("http://localhost:9999");
     }
 
-    String firstMeetingDate = DataGenerator.generateDate(-1);
+    String firstMeetingDate = DataGenerator.generateDate(3);
     String secondMeetingDate = DataGenerator.generateDate(5);
     String invalidMeetingDate = DataGenerator.generateDate(0);
 
@@ -67,7 +67,7 @@ class CardOrderTest {
         $("[data-test-id=phone] input").setValue(DataGenerator.generatePhone());
         $("[data-test-id=agreement]").click();
         $(withText("Запланировать")).click();
-        $(".input_invalid .input__sub").shouldHave(exactText(" оставка в выбранный город недоступна"));
+        $(".input_invalid .input__sub").shouldHave(exactText("Доставка в выбранный город недоступна"));
     }
 
     @Test
@@ -79,7 +79,7 @@ class CardOrderTest {
         $("[data-test-id=phone] input").setValue(DataGenerator.generatePhone());
         $("[data-test-id=agreement]").click();
         $(withText("Запланировать")).click();
-        $(".input_invalid .input__sub").shouldHave(exactText(" аказ на выбранную дату невозможен"));
+        $(".input_invalid .input__sub").shouldHave(exactText("Заказ на выбранную дату невозможен"));
     }
 
     @Test

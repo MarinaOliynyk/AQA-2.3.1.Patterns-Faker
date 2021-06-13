@@ -53,7 +53,7 @@ public class DataGenerator {
 
         public static UserInfo generateUser() {
             return new UserInfo(getCity(),
-                    faker.name().firstName() + " " + faker.name().lastName(),
+                    faker.name(). lastName() + " " + faker.name().firstName(),
                     faker.phoneNumber().phoneNumber());
         }
     }
