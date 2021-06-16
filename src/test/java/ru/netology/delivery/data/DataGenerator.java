@@ -37,12 +37,12 @@ public class DataGenerator {
         return list.get(random.nextInt(list.size()));
     }
 
-    public static String generateName() {
+    public static String getName() {
         String name = faker.name().fullName().replace("ё", "е");
         return name;
     }
 
-    public static String generatePhone() {
+    public static String getPhone() {
         String phone = faker.phoneNumber().phoneNumber();
         return phone;
     }
@@ -51,7 +51,7 @@ public class DataGenerator {
         private Registration() {
         }
 
-        public static UserInfo generateUser() {
+        public static UserInfo generateValidUser() {
             return new UserInfo(getCity(),
                     faker.name(). lastName() + " " + faker.name().firstName(),
                     faker.phoneNumber().phoneNumber());
